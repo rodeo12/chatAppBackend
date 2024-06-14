@@ -36,6 +36,10 @@ io.on('connection', (socket) => {
 // Error handling middleware
 app.use(errorHandlingMiddleware);
 
+app.get("/",(req,res)=>{
+    res.send("Welcome To Chat App Backend");
+})
+
 // Sync Sequelize models with the database
 sequelize.sync({ alter: true }) // You can use { force: true } to force synchronization (drops existing tables)
     .then(() => {
