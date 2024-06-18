@@ -1,6 +1,6 @@
 const ChatRoom = require('../models/ChatRoom');
 const User = require('../models/User');
-const Message = require('../models/message');
+const Message = require('../models/Message');
 let io;
 
 const initialize = (socketIo) => {
