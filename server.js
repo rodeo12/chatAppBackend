@@ -111,6 +111,10 @@ app.use(errorHandlingMiddleware);
 // Start the server
 const PORT = process.env.PORT || 3000;
 
+
+app.get("/",(req,res)=>{
+    res.send("Welcome to ChatApp Backend")
+  })
 // Connect to the database and sync
 sequelize
     .authenticate()
