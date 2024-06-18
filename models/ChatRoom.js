@@ -11,6 +11,10 @@ const ChatRoom = sequelize.define('ChatRoom', {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     createdBy: {
         type: DataTypes.STRING,
         allowNull: false,

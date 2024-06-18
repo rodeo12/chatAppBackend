@@ -28,6 +28,7 @@ const User = sequelize.define('User', {
   },
   phone: {
     type: DataTypes.STRING,
+    unique: true,
     allowNull: false,
   },
   availCoins: {
@@ -42,6 +43,10 @@ const User = sequelize.define('User', {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
+  hasUsedFreeRoom: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false // Default value can be false
+}
 }, {
   timestamps: true,
   updatedAt: 'updatedAt',
